@@ -4,22 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sabely's Blog</title>
-  <link rel="stylesheet" type="text/css" href="./assets/css/blog.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/js/blog.js" />
   <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/js/logic.js" />
 </head>
 
-<body >
+<body class="dark mode" >
   <main>
-    <h1>💕Personal Blog💕</h1>
-
+    <header><h1>💕Personal Blog💕  <button id="Toggl">🌓</button></h1> 
+       </header>
+    
+   
 <form id= "BlogForm">
     <label for="username">Username:</label> 
+    <input type="text" id="Username" required>
     <label for="BlogTitle">Title:</label>
+    <input type="text" id="BlogTitle" required>
     <label for="BlogContent">Content:</label>
+    <input type="text" id="BlogContent" required>
     <button type="submit">❣️SUBMIT❣️</button>
 </form>
-  <script type="text/javascript" src="assets/js/blog.js">
+  <script src="assets/js/blog.js">
   </script>
+    <script src="assets/js/logic.js">
+    </script>
 </body>
 
 </html>
