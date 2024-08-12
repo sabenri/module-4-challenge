@@ -44,6 +44,7 @@ body {
     background-color: #ff9bde;
     color:#5598f0;
     border: dotted;
+    margin: 10px;
 }
 label {
     margin-bottom: 10px;

@@ -1,9 +1,19 @@
-const UserName = document.querySelector ('#username');
-const BlogName = document.querySelector('#title');
-const ContentText = docment.querySelector('#content');
-const SubmitButton = socument.querySelector('#button'):
+const BlogForm = document.getElementById('BlogForm');
 
-let UserNameArray = [];
+BlogForm.addEventListener('Submit', function(event){
+    event.preventDefault();
 
-SubmitButton.addEventListener('click', function (event) );
+    const Username = document.getElementById('Username').value;
+    const Title = document.getElementById('Title').value;
+    const Content = document.getElementById('Content').value;
+    const blogPost = {
+        Username: Username,
+        Title: Title,
+        Content: Content
+    };
+    const blogPostJSON = JSON.stringify(blogPost);
+
+     localStorage.setItem('blogPost', blogPostJSON);
+     window.Location.herf= 'blogpost.html';
 }
+ )
