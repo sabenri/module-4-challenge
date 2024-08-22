@@ -17,3 +17,16 @@ BlogForm.addEventListener('Submit', function(event){
      window.Location.herf= 'blogpost.html';
 }
  )
+
+ function saveResponse() {
+    let userSave = localStorage.getItem("Username");
+    let titleSave = localStorage.getItem("Title");
+    let ContentSave = localStorage.getItem("Content");
+    Username.textcontent = userSave;
+    Title.textcontent = titleSave;
+    Content.textcontent = ContentSave;
+
+    return
+ }
+
+ saveResponse();
