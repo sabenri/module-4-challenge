@@ -12,4 +12,3 @@ TogglButton.addEventListener('click', function() {
 
     }
 });
-
