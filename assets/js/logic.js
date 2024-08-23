@@ -1,4 +1,4 @@
-let darkMode = false;
+let darkMode = 'true';
 const TogglButton = document.getElementById('Toggl');
 const body = document.body;
 

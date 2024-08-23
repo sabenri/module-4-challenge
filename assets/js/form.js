@@ -7,11 +7,25 @@ let UsernameArray = [];
 let BlogTitleArray = [];
 let BolgContentArray = [];
 
-submitButton.addEventListenr('click' , function(Event)) {
-    Event.preventDefault();
+button.addEventListener('click', function(event) {
+    event.preventDefault()
+
+  const UsernameValue = Username.Value.trim();
+  const TitleValue = Title.value.trim();
+  const ContentValue = Content.Value.trim();
+
+  if (UsernameValue && TitleValue && ContentValue){
+
+    SaveToLocalStorage('Username', UsernameValue)
+    SaveToLocalStorage('TiTle' , TitleValue);
+    SaveToLocalStorage('content', ContentValue);
     
-    UsernameArray.push(Username.ariaValueMax.trim());
-}
+    window.location.href = 'blog.html'
+  }
+
+
+});
+
  
 function saveResponse() {
     let userSave = localStorage.getItem("Username");
