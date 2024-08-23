@@ -12,3 +12,6 @@ TogglButton.addEventListener('click', function() {
 
     }
 });
+backButton.addEventListener('click', function() {
+    window.location.href = 'sabelyblog.html';
+});
