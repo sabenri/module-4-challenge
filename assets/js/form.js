@@ -9,10 +9,15 @@ BlogForm.addEventListener ('submit', function(event){
 
     if (Username && Title && Content)
     {
-        const blogpost = '${Username}|||${Title}|||${Content}';
-        let posts = localStorage.getItem('posts');
-        posts = posts ? posts + '|||' + blogpost : blogpost;
-        localStorage.setItem('posts',posts);
+        const blogpost = {
+            Username: Username,
+            Title: Title,
+            Content: Content
+        };
+
+        let posts =JSON.parse(localStorage.getItem('posts'));
+        posts.push(blogpost);
+        localStorage.setItem('posts',JSON.stringify(posts));
 
         window.location.href = 'blogpost.html';
     }

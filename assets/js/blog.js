@@ -1,12 +1,7 @@
-function SaveResponse () {
-    const posts = (localStorage.getItem('posts')|| '').split('|||');
-    const NewPost = posts.length - 3;
+function Display (){
+    const posts = JSON.parse(localStorage.getItem('posts')) || [];
+    const NewPost = posts[posts.lenght -1] || {};
 
-    if (NewPost >=0) {
-        document.getElementById('User').textContent = posts[NewPost] || '';
-        document,getElementById('title').textContent = posts[NewPost] +1 || '';
-        document,getElementById('title').textContent = posts[NewPost] + 2 || '';
-    }
-
+    document.getElementById('user').textContent = NewPost.Username || '';
+    
 }
-SaveResponse();
